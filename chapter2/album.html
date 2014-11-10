@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="albumModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular 列表</title>
+    <script src="../common/js/angular.min.js"></script>
+    <script src="../custom/js/album.js"></script>
+</head>
+<body>
+    <div>
+        <table ng-controller="albumController">
+            <tr ng-repeat="album in albums">
+                <td>{{$index + 1}}</td>
+                <td>{{album.name}}</td>
+                <td>{{album.duration}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

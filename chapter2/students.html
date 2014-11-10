@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="StudentModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular 列表迭代</title>
+    <script src="../common/js/angular.min.js"></script>
+    <script src="../custom/js/student.js"></script>
+</head>
+<body>
+    <div>
+        <ul ng-controller="studentController">
+            <li ng-repeat="student in students">
+                <a href="/student/view/{{student.id}}">{{student.name}}</a>
+            </li>
+        </ul>
+        <button ng-click="insertTom()">Insert</button>
+    </div>
+</body>
+</html>
