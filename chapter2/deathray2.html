@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="deathrayModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular 显示隐藏</title>
+    <link rel="stylesheet" href="../custom/css/deathray.css">
+    <script src="../common/js/angular.min.js"></script>
+    <script src="../custom/js/chapter2/deathray2.js"></script>
+</head>
+<body>
+<div ng-controller="deathrayController">
+    <button ng-click="toggleMenu()">ToggleMenu</button>
+    <ul ng-show="menuState.show">
+        <li class="menu-disabled-{{isDisabled}}" ng-click="stun()">Stun</li>
+        <li ng-click="disintegrate()">Disintegrate</li>
+        <li ng-click="erase()">Erase</li>
+    </ul>
+</div>
+</body>
+</html>

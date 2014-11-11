@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="restaurantModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular CSS</title>
+    <link rel="stylesheet" href="../custom/css/restaurant.css">
+    <script src="../common/js/angular.min.js"></script>
+    <script src="../custom/js/chapter2/restaurant.js"></script>
+</head>
+<body>
+    <div ng-controller="HeadController">
+        <div ng-class="{error:isError, warning:isWarning}">{{messageText}}</div>
+        <button ng-click="showError()">Simulate Error</button>
+        <button ng-click="showWarning()">Simulate Warning</button>
+    </div>
+    <table ng-controller="RestaurantController">
+        <tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class="{selected : $index==selectedRow}">
+            <td>{{restaurant.name}}</td>
+            <td>{{restaurant.cuisine}}</td>
+        </tr>
+    </table>
+</body>
+</html>

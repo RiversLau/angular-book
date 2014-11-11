@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="focusModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular directive focus</title>
+    <script src="../common/js/angular.min.js"></script>
+    <script src="../custom/js/chapter2/focus_directive.js"></script>
+</head>
+<body ng-controller="FocusController">
+    <button ng-click="clickUnfocused()">Not Focused</button>
+    <button ngbk-focus ng-click="clickFocused()">I'm very focused!</button>
+    <div>{{message.text}}</div>
+</body>
+</html>
